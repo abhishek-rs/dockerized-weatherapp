@@ -1,0 +1,10 @@
+# OSX
+.DS_Store
+
+# Node
+node_modules
+
+# Logs
+*.log
+
+keys.js
