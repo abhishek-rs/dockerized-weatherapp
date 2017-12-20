@@ -1,0 +1,23 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "app to show current and future weather forecast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parallelshell \"npm start --prefix ./backend\" \"npm start --prefix ./frontend\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishek-rs/dockerized-weatherapp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhishek-rs/dockerized-weatherapp/issues"
+  },
+  "homepage": "https://github.com/abhishek-rs/dockerized-weatherapp#readme",
+  "devDependencies": {
+    "parallelshell": "^3.0.2"
+  }
+}

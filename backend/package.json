@@ -6,7 +6,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "DEBUG=weathermap ./node_modules/.bin/nodemon src/index.js",
+    "dev": "./node_modules/.bin/nodemon src/index.js",
     "lint": "eslint src/*.js"
   },
   "dependencies": {
