@@ -1,53 +1,39 @@
 # Weatherapp
 
-There was a beautiful idea of building an app that would show the upcoming weather. The developers wrote a nice backend and a frontend following the latest principles and - to be honest - bells and whistles. However, the developers did not remember to add any information about the infrastructure or even setup instructions in the source code.
+How to run -
 
-Luckily we now have [docker compose](https://docs.docker.com/compose/) saving us from installing the tools on our computer, and making sure the app looks (and is) the same in development and in production. All we need is someone to add the few missing files!
+1. Add a keys.js file in the folder /backend and add your OpenWeather API key as shown below - 
 
-## Prerequisites
+`const appid = "Your KEY here";`
+`module.exports = appid;`
 
-* An [openweathermap](http://openweathermap.org/) API key.
-* [Docker](https://www.docker.com/) and [docker compose](https://docs.docker.com/compose/) installed.
+2. To run using docker, run the command `docker-compose up` in the main project folder. 
 
-## Returning your solution
+3. To manually run using npm (not recommended) you will need to run npm install in the project main folder, `/backend`, and `/frontend` folder separately. Once this is done, return to the main folder and run 
 
-### Via github
+`npm start`   
 
-* Make a copy of this repository in your own github account (do not fork unless you really want to be public).
-* Create a personal repository in github.
-* Make changes, commit them, and push them in your own repository.
-* Send us the url where to find the code.
-
-### Via tar-package
-
-* Clone this repository.
-* Make changes and **commit them**.
-* Create a **.tgz** -package including the **.git**-directory, but excluding the **node_modules**-directories.
-* Send us the archive.
-
-## Exercises
-
-There are a few things you must do to get the app up and running. After that there are a few things you can do to make it better.
+## Tasks 
 
 ### Mandatory
 
-* Get yourself an API key to make queries in the [openweathermap](http://openweathermap.org/).
+* Get yourself an API key to make queries in the [openweathermap](http://openweathermap.org/). [Done]
 
-* Either run the app locally (using `npm i && npm start`) or move to the next step.
+* Either run the app locally (using `npm i && npm start`) or move to the next step. [Done]
 
-* Add **Dockerfile**'s in the *frontend* and the *backend* directories to run them virtually on any environment having [docker](https://www.docker.com/) installed. It should work by saying e.g. `docker build -t weatherapp_backend . && docker run --rm -i -p 9000:9000 --name weatherapp_backend -t weatherapp_backend`. If it doesn't, remember to check your api key first.
+* Add **Dockerfile**'s in the *frontend* and the *backend* directories to run them virtually on any environment having [docker](https://www.docker.com/) installed. It should work by saying e.g. `docker build -t weatherapp_backend . && docker run --rm -i -p 9000:9000 --name weatherapp_backend -t weatherapp_backend`. If it doesn't, remember to check your api key first. [Done]
 
-* Add a **docker-compose.yml** -file connecting the frontend and the backend, enabling running the app in a connected set of containers.
+* Add a **docker-compose.yml** -file connecting the frontend and the backend, enabling running the app in a connected set of containers. [Done]
 
-### Optional (do as many as you like)
+### Optional 
 
-* The application now only reports the current weather. It should probably report the forecast e.g. a few hours from now. (tip: [openweathermap api](https://openweathermap.org/forecast5))
+* The application now only reports the current weather. It should probably report the forecast e.g. a few hours from now. (tip: [openweathermap api](https://openweathermap.org/forecast5)) [Done]
 
-* The developers are still keen to run the app and its pipeline on their own computers. Share the development files for the container by using volumes, and make sure the containers are started with a command enabling hot reload.
+* The developers are still keen to run the app and its pipeline on their own computers. Share the development files for the container by using volumes, and make sure the containers are started with a command enabling hot reload. [Done]
 
-* There are [eslint](http://eslint.org/) errors. Sloppy coding it seems. Please help.
+* There are [eslint](http://eslint.org/) errors. Sloppy coding it seems. Please help. [Done]
 
-* The app currently reports the weather only for location defined in the *backend*. Shouldn't it check the browser location and use that as the reference for making a forecast? (tip: [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation))
+* The app currently reports the weather only for location defined in the *backend*. Shouldn't it check the browser location and use that as the reference for making a forecast? (tip: [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)) [Done]
 
 * There are no tests. Where are the tests? (tip: [mocha](https://mochajs.org/) or [robot framework](http://robotframework.org/)) Disclaimer: this is not an easy task. If you really want to try writing robot tests, start by creating a third container that gives expected weather data, and direct the backend queries there by redefining the **MAP_ENDPOINT**.
 
