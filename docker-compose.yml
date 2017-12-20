@@ -5,9 +5,13 @@ services:
         build: ./frontend
         ports:
             - 8000:8000
+        volumes:
+        - ./frontend:/frontend-code
         
     backend:
         build: ./backend
         ports:
             - 9000:9000
+        volumes:
+        - ./backend:/backend-code
         

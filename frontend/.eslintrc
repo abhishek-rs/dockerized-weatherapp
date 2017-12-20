@@ -7,10 +7,15 @@
   },
   "rules": {
     "semi": ["error", "always"],
-    "comma-dangle": ["error", "always-multiline"]
+    "comma-dangle": ["error", "always-multiline"],
+    "linebreak-style": ["error", "windows"],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-alert": "off"
   },
   "globals": {
     "fetch": false,
-    "document": true
+    "document": true,
+    "navigator": true,
+    "alert": true
   }
 }
