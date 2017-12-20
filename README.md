@@ -2,7 +2,9 @@
 
 How to run -
 
-1. Add a keys.js file in the folder /backend and add your OpenWeather API key as shown below - 
+1. Clone the project using `git clone`
+
+2. Add a keys.js file in the folder /backend and add your OpenWeather API key as shown below - 
 
 `const appid = "Your KEY here";`
 `module.exports = appid;`
