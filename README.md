@@ -13,6 +13,12 @@ How to run -
 
 `npm start`   
 
+## Please note 
+
+I am using docker on docker-toolbox so I run my containers on a different IP. If you are running them on localhost, you will need to change the url to the backend in `Line 46` of the file `webpack.config.js` in `\frontend` to 
+
+`http://0.0.0.0:9000/api`
+
 ## Tasks 
 
 ### Mandatory
