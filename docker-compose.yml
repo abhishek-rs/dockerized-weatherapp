@@ -1,17 +1,14 @@
 version: "2.2"
 
 services:
-    frontend:
-        image: shek/weatherapp:frontend
-        ports:
-            - 8000:8000
-        volumes:
-        - ./frontend:/frontend-code
-        
-    backend:
-        image: shek/weatherapp:backend
-        ports:
-            - 9000:9000
-        volumes:
-        - ./backend:/backend-code
-        
+  frontend:
+    ports:
+      - 8000:8000
+    build:
+      context: ./frontend
+
+  backend:
+    ports:
+      - 9000:9000
+    build:
+      context: ./backend
